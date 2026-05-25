@@ -180,7 +180,7 @@ class KuramotoDiscreto:
             }
             if t < T:
                 fila["S_i(theta_t)"] = tuple(int(x) for x in S_hist[t])
-		fila["sigma_kappa(S_i)"] = tuple(int(x) for x in sigma_hist[t])
+		        fila["sigma_kappa(S_i)"] = tuple(int(x) for x in sigma_hist[t])
             else:
                 fila["S_i(theta_t)"]     = "-"
                 fila["sigma_kappa(S_i)"] = "-"
