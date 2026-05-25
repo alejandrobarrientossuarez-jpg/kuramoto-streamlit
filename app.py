@@ -174,13 +174,13 @@ class KuramotoDiscreto:
         for t in range(T + 1):
             fila = {
                 "t":              t,
-                "theta(t)": tuple(int(x) for x in trayectoria[t]),
+                "theta(t)":       str(tuple(int(x) for x in trayectoria[t])),
                 "r(t)":           round(r_hist[t], 4),
-                "subred_acuerdo": tuple((int(a), int(b)) for a, b in resultado["subredes"][t]),
+                "subred_acuerdo": str(tuple((int(a), int(b)) for a, b in resultado["subredes"][t])),
             }
             if t < T:
-                fila["S_i(theta_t)"] = tuple(int(x) for x in S_hist[t])
-                fila["sigma_kappa(S_i)"] = tuple(int(x) for x in sigma_hist[t])
+                fila["S_i(theta_t)"]     = str(tuple(int(x) for x in S_hist[t]))
+                fila["sigma_kappa(S_i)"] = str(tuple(int(x) for x in sigma_hist[t]))
             else:
                 fila["S_i(theta_t)"]     = "-"
                 fila["sigma_kappa(S_i)"] = "-"
@@ -672,4 +672,3 @@ with tab4:
     for img in imagenes:
         st.image(img["ruta"], caption=img["titulo"], use_column_width=True)
         st.divider()
-
