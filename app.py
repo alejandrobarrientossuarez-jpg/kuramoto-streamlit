@@ -546,7 +546,7 @@ with tab1:
         st.subheader("Parámetros usados")
         col1, col2, col3, col4 = st.columns(4)
         col1.metric("Grafo", tipo_grafo)
-        col2.metric("θ₀", str(tuple(theta0)))
+        col2.metric("θ₀", str(tuple(int(x) for x in theta0)))
         col3.metric("Tipo atractor", clasif["tipo"])
         col4.metric("r final", f"{resultado['r_hist'][-1]:.4f}")
 
